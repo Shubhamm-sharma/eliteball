@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import axios from "axios";
 
 const RegisterForm = () => {
+  const handleCheck = async () => {
+    await axios.get(`${window.location.origin}/register`);
+    console.log("ppp");
+  };
   return (
     <Row className="d-flex parentRowRegisterForm py-4 justify-content-center">
       <Col
@@ -75,7 +80,11 @@ const RegisterForm = () => {
                 />
               </Form.Group>
               <Form.Group className="d-flex justify-content-center mt-4">
-                <button type="button" class="btn btn-outline-dark">
+                <button
+                  onClick={handleCheck}
+                  type="button"
+                  class="btn btn-outline-dark"
+                >
                   Submit
                 </button>
               </Form.Group>
