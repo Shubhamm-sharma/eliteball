@@ -1,0 +1,5 @@
+export const screenMode = {
+  // SCREEN LIGHT
+  SCREEN_MODE_LIGHT: "SCREEN_MODE_LIGHT",
+  SCREEN_MODE_DARK: "SCREEN_MODE_DARK",
+};
