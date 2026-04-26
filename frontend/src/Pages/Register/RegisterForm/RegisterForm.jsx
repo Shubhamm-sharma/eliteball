@@ -1,98 +1,73 @@
-import React from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import axios from "axios";
+import React, { useState } from "react";
+import { Col, Row, Form, Button } from "react-bootstrap";
+import TeamPosition from "./Modal/TeamPosition";
+import SignUpForm from "./SignUpForm/SignUpForm";
+import LoginForm from "./LoginForm/LoginForm";
 
 const RegisterForm = () => {
-  const handleCheck = async () => {
-    await axios.get(`${window.location.origin}/register`);
-    console.log("ppp");
+  const [showTeamPosition, setShowTeamPosition] = useState(false);
+  const [activeTab, setActiveTab] = useState("signup"); // State to track active tab
+
+  const onSubmit = (data) => {
+    console.log(data);
   };
+
   return (
-    <Row className="d-flex parentRowRegisterForm py-4 justify-content-center">
-      <Col
-        className="registerFormParent d-flex align-items-center justify-content-center"
-        lg={8}
-      >
-        <Row className="d-flex py-3 justify-content-center ">
-          <Col lg={10} className="">
-            <h3 className="text-white">Sign Up!</h3>
-          </Col>
-          <Col lg={10}>
-            <Form className="mb-3">
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  First Name<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your First Name"
-                />
-              </Form.Group>
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  Last Name<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your Last Name"
-                />
-              </Form.Group>
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  Contact Number<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your Phone Number"
-                />
-              </Form.Group>
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  Email<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your Email"
-                />
-              </Form.Group>
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  Team Name<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your Team Name"
-                />
-              </Form.Group>
-              <Form.Group className="mb-2">
-                <Form.Label className="text-white m-0">
-                  Position<span className="text-danger">*</span>
-                </Form.Label>
-                <Form.Control
-                  className=""
-                  type="text"
-                  placeholder="Enter your position in team"
-                />
-              </Form.Group>
-              <Form.Group className="d-flex justify-content-center mt-4">
-                <button
-                  onClick={handleCheck}
-                  type="button"
-                  class="btn btn-outline-dark"
-                >
-                  Submit
-                </button>
-              </Form.Group>
-            </Form>
-          </Col>
-        </Row>
-      </Col>
-    </Row>
+    <>
+      <Row className="d-flex parentRowRegisterForm py-4 justify-content-center">
+        <Col
+          className="registerFormParent d-flex flex-column align-items-center justify-content-center position-relative"
+          lg={8}
+        >
+          {/* Navigation toggle */}
+          <nav className=" w-100 position-absolute top-0 start-50 translate-middle-x">
+            <div
+              className="nav nav-tabs pb-0 d-flex justify-content-between"
+              id="nav-tab"
+              role="tablist"
+            >
+              {/* Toggle between sign up and login tabs */}
+              <button
+                className={`nav-link ${
+                  activeTab === "signup" ? "active" : ""
+                } flex-grow-1`}
+                id="nav-home-tab"
+                onClick={() => setActiveTab("signup")}
+                type="button"
+                role="tab"
+                aria-controls="nav-home"
+                aria-selected={activeTab === "signup"}
+              >
+                Sign Up
+              </button>
+              <button
+                className={`nav-link ${
+                  activeTab === "login" ? "active" : "text-white"
+                } flex-grow-1`}
+                id="nav-profile-tab"
+                onClick={() => setActiveTab("login")}
+                type="button"
+                role="tab"
+                aria-controls="nav-profile"
+                aria-selected={activeTab === "login"}
+              >
+                Login
+              </button>
+            </div>
+          </nav>
+
+          {/* Main content */}
+          <Row className="d-flex justify-content-center mt-5">
+            {activeTab === "signup" && <SignUpForm />}
+            {activeTab === "login" && <LoginForm />}
+          </Row>
+        </Col>
+      </Row>
+      <TeamPosition
+        show={showTeamPosition}
+        hide={() => setShowTeamPosition(false)}
+      />
+    </>
   );
 };
 

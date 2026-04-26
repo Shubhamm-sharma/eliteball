@@ -1,0 +1,62 @@
+.fixturesPage {
+  min-height: calc(100vh - 72px);
+  padding: 112px 0 48px;
+}
+
+.fixturesHeader {
+  color: white;
+}
+
+.fixturesSubtitle {
+  color: #d4d4d4;
+  margin: 0;
+}
+
+.fixturesStatus {
+  border-radius: 6px;
+  color: #2f2f2f;
+  background: #ffffff;
+  padding: 18px;
+  text-align: center;
+}
+
+.fixtureCard {
+  background: #ffffff;
+  border-radius: 8px;
+  color: #202020;
+  box-shadow: rgba(0, 0, 0, 0.18) 0 16px 32px;
+}
+
+.fixtureMeta {
+  color: #666666;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.fixtureTeamLogo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eeeeee;
+}
+
+.fixtureLogoFallback {
+  align-items: center;
+  background: #e8f5ec;
+  color: #1f6f37;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.fixtureScore {
+  font-size: 28px;
+  font-weight: 700;
+  min-width: 72px;
+  text-align: center;
+}
+
+.fixtureTeamName {
+  font-weight: 700;
+}

@@ -13,8 +13,8 @@
 body {
   background-image: linear-gradient(
     to bottom left,
-    white,
-    rgb(111, 111, 111)
+    rgb(83, 82, 82),
+    rgb(36, 36, 36)
   ) !important;
 }
 
@@ -88,7 +88,7 @@ body {
   color: rgb(15, 56, 1);
 }
 
-.modal {
+/* .modal {
   --bs-modal-zindex: 0 !important;
   border: 0;
 }
@@ -100,12 +100,13 @@ body {
 
 .modal-backdrop.show {
   background-color: white;
-}
+} */
 
 /* Navbar design */
 
 .navbarParent {
-  background-image: linear-gradient(to bottom right, black, grey);
+  /* background-image: linear-gradient(to bottom right, black, grey); */
+  background: black;
   z-index: 999;
   width: 100%;
 }
@@ -120,14 +121,14 @@ body {
 
 .navlinks_active {
   font-weight: 400;
-  border-radius: 30px;
+  border-radius: 7px;
   color: #414141;
   background-image: linear-gradient(to top left, grey, white);
 }
 
 .navlinks:hover {
   font-weight: 400;
-  border-radius: 30px;
+  border-radius: 7px;
   background-image: linear-gradient(to top left, grey, white);
   color: #414141;
   padding-top: 8px;
@@ -212,16 +213,21 @@ body {
   max-height: 300px; /* Adjust the max height as needed */
 }
 
-.defaultTextColorYellow {
-  color: rgb(58, 57, 57);
+.fixtureBlock {
+  background-color: white;
+  border-radius: 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.fixtureBlock {
-  background-color: white !important;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+.fixtureBlock:hover {
+  background-color: rgb(206, 245, 218) !important;
+  border-radius: 15px;
 }
+
 .buttonHomePage {
   border-radius: 5px;
   background-image: linear-gradient(to right, #45a049 50%, #fff 50%);
@@ -245,7 +251,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2c73df;
+  /* Additional styles */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image within the div */
 }
 
 .container .card .icon .fa {
@@ -342,7 +350,7 @@ body {
 }
 
 .parentHomePage {
-  padding-top: 72px !important;
+  padding-top: 112px !important;
 }
 
 /* The switch - the box around the slider */
@@ -405,4 +413,20 @@ input:checked + .slider:before {
 
 .cp {
   cursor: pointer;
+}
+
+.footerParent {
+  height: 120px;
+  background: black;
+  color: white;
+}
+
+.copyright {
+  font-size: large;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue";
+  font-weight: 400;
+  font-style: normal;
 }

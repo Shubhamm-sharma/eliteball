@@ -1,0 +1,27 @@
+.football-field {
+  width: 298px;
+  height: 350px;
+  background: linear-gradient(
+    to bottom,
+    #72ca1b 50%,
+    #72ca1b 50%,
+    #acff70 50%,
+    #acff70 50%
+  );
+  background-size: 100% 175px; /* Adjust the size of the stripes */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cp:hover {
+  color: grey; /* Change to your desired color */
+}
+
+.toggleButtonRegister {
+  /* width: 100 !important; */
+  /* height: auto; */
+}
+
+.no-hover:hover {
+  background-color: none !important;
+}

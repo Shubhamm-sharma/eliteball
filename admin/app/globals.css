@@ -1,0 +1,70 @@
+:root {
+  --bg: #061117;
+  --bg-soft: #0d1f29;
+  --surface: rgba(8, 24, 31, 0.78);
+  --surface-strong: rgba(13, 34, 42, 0.94);
+  --surface-muted: rgba(255, 255, 255, 0.04);
+  --line: rgba(180, 214, 208, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #eef7f1;
+  --muted: #9fb6b1;
+  --accent: #ff6b3d;
+  --accent-soft: #ffb26f;
+  --accent-2: #c4ff6c;
+  --accent-3: #29d4c7;
+  --success: #49d17d;
+  --danger: #ff6f86;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+body {
+  color: var(--text);
+  font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(41, 212, 199, 0.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(255, 107, 61, 0.18), transparent 24%),
+    linear-gradient(160deg, #071218 0%, #0a1720 42%, #08151b 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  content: "";
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(255, 178, 111, 0.28);
+}

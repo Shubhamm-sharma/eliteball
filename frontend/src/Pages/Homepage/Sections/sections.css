@@ -1,0 +1,16 @@
+.basicHeading {
+  color: white;
+}
+
+.teamLogoFallback {
+  align-items: center;
+  background: #e8f5ec;
+  border-radius: 50%;
+  color: #1f6f37;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}

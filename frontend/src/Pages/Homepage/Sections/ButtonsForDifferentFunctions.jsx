@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 const ButtonsForDifferentFunctions = () => {
   return (
     <>
-      <Row xxl={10} xl={10} lg={10} md={10} sm={10} xs={10} className="mt-4">
+      {/* <Row xxl={10} xl={10} lg={10} md={10} sm={10} xs={10} className="mt-4">
         <Col
           xxl={3}
           xl={3}
@@ -57,7 +57,7 @@ const ButtonsForDifferentFunctions = () => {
             Organize Tournaments with Us
           </button>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };

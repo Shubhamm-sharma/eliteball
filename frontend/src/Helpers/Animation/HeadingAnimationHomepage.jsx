@@ -6,9 +6,9 @@ const HeadingAnimationHomepage = () => {
   const heading = "ELITE BALL";
   const [show, setShow] = useState(true);
   useEffect(() => {
-    // setTimeout(() => {
-    setShow(false);
-    // }, 2500);
+    setTimeout(() => {
+      setShow(false);
+    }, 2500);
   }, []);
   const location = useLocation();
   return (
